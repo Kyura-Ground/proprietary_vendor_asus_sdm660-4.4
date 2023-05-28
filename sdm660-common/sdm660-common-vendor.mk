@@ -229,7 +229,6 @@ PRODUCT_PACKAGES += \
     libAlacSwDec_vendor \
     libApeSwDec_vendor \
     libFlacSwDec_vendor \
-    libI420colorconvert_vendor \
     libOmxAacDec_vendor \
     libOmxAlacDec_vendor \
     libOmxAlacDecSw_vendor \
