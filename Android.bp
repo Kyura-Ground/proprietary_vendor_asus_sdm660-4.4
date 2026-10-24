@@ -12,6 +12,87 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmmosal_system",
+    stem: "libmmosal",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system/lib/libmmosal.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libmmosal.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libFileMux_system",
+    stem: "libFileMux",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system/lib/libFileMux.so",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxMux_system",
+    stem: "libOmxMux",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system/lib/libOmxMux.so",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmparser_lite_system",
+    stem: "libmmparser_lite",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system/lib/libmmparser_lite.so",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqsocket",
     owner: "asus",
     strip: {
@@ -36,6 +117,56 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "fm_helium_system_ext",
+    stem: "fm_helium",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/fm_helium.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/fm_helium.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfm-hci_system_ext",
+    stem: "libfm-hci",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libfm-hci.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libfm-hci.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0",
     owner: "asus",
     strip: {
@@ -50,6 +181,31 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/system_ext/lib64/vendor.qti.hardware.fm@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.iop@2.0_system_ext",
+    stem: "vendor.qti.hardware.iop@2.0",
+    owner: "asus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/vendor.qti.hardware.iop@2.0.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.iop@2.0.so",
             ],
         },
     },
