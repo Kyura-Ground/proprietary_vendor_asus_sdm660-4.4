@@ -105,6 +105,7 @@ android_app_import {
 
 android_app_import {
     name: "QtiTelephonyService",
+    enforce_uses_libs: false,
     owner: "asus",
     apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
     certificate: "platform",
@@ -116,6 +117,10 @@ android_app_import {
 
 android_app_import {
     name: "imssettings",
+    uses_libs: [
+        "ims-ext-common",
+        "qti-telephony-utils",
+    ],
     owner: "asus",
     apk: "proprietary/system_ext/app/imssettings/imssettings.apk",
     certificate: "platform",
@@ -138,6 +143,7 @@ android_app_import {
 
 android_app_import {
     name: "dpmserviceapp",
+    enforce_uses_libs: false,
     owner: "asus",
     apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
     certificate: "platform",
@@ -150,6 +156,11 @@ android_app_import {
 
 android_app_import {
     name: "ims",
+    uses_libs: [
+        "qti-telephony-hidl-wrapper",
+        "qti-telephony-utils",
+        "ims-ext-common",
+    ],
     owner: "asus",
     apk: "proprietary/system_ext/priv-app/ims/ims.apk",
     certificate: "platform",
@@ -162,6 +173,10 @@ android_app_import {
 
 android_app_import {
     name: "qcrilmsgtunnel",
+    uses_libs: [
+        "qti-telephony-hidl-wrapper",
+        "qti-telephony-utils",
+    ],
     owner: "asus",
     apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
     certificate: "platform",
